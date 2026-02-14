@@ -72,14 +72,6 @@
                             </div>
                         </li>
 
-                        <li><a href="#">Pages</a>
-                            <ul class="dropdown">
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="single-product-details.html">Product Details</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                            </ul>
-                        </li>
-
                         <li><a href="{% url 'blog:index' %}">Blog</a></li>
                         <li><a href="{% url 'core:contact' %}">Contact</a></li>
                         <li><a href="{% url 'core:about' %}">about</a></li>
@@ -98,14 +90,12 @@
                     <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </div>
-            <!-- Favourite Area -->
-            <div class="favourite-area">
-                <a href="#"><img src="{% static 'img/core-img/heart.svg' %}" alt=""></a>
-            </div>
+
             <!-- User Login Info -->
             <div class="user-login-info">
                 <a href="#"><img src="{% static 'img/core-img/user.svg' %}" alt=""></a>
             </div>
+
             <!-- Cart Area -->
             <div class="cart-area">
                 <a href="#" id="essenceCartBtn"><img src="{% static 'img/core-img/bag.svg' %}" alt="">
@@ -115,9 +105,7 @@
 
     </div>
 </header>
-<!-- ##### Header Area End ##### -->
 
-<!-- ##### Right Side Cart Area ##### -->
 <div class="cart-bg-overlay"></div>
 
 <div class="right-side-cart-area">
@@ -191,7 +179,7 @@
                 <li><span>total:</span> <span>$232.00</span></li>
             </ul>
             <div class="checkout-btn mt-100">
-                <a href="checkout.html" class="btn essence-btn">check out</a>
+                <a href="{% url 'cart:index' %}" class="btn essence-btn">check out</a>
             </div>
         </div>
     </div>
@@ -216,10 +204,10 @@
                     <!-- Footer Menu -->
                     <div class="footer_menu">
                         <ul>
-                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="{% url 'shop:index' %}">Shop</a></li>
                             <li><a href="{% url 'blog:index' %}">Blog</a></li>
                             <li><a href="{% url 'core:contact' %}">Contact</a></li>
-                            <li><a href="{% url 'core:about' %}">Contact</a></li>
+                            <li><a href="{% url 'core:about' %}">about</a></li>
                         </ul>
                     </div>
                 </div>
@@ -274,18 +262,6 @@
             </div>
         </div>
 
-        <div class="row mt-5">
-            <div class="col-md-12 text-center">
-                <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-                        href="https://colorlib.com" target="_blank">Colorlib</a>, distributed by <a
-                        href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </p>
-            </div>
-        </div>
 
     </div>
 
