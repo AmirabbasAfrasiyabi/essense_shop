@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#444;
+    line-height:1.8;
+}
+
+/* ===== HERO ===== */
+.about-hero{
+    background:#f8f9fa;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.about-hero h1{
+    font-size:42px;
+    margin-bottom:20px;
+    color:#222;
+}
+
+.about-hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    color:#666;
+}
+
+/* ===== SECTION ===== */
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:50px;
+    color:#222;
+}
+
+/* ===== STORY SECTION ===== */
+.story-container{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.story-text{
+    flex:1 1 500px;
+}
+
+.story-text p{
+    margin-bottom:18px;
+    font-size:16px;
+    color:#555;
+}
+
+.story-image{
+    flex:1 1 400px;
+}
+
+.story-image img{
+    width:100%;
+    border-radius:16px;
+}
+
+/* ===== FEATURES ===== */
+.features{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.feature-box{
+    flex:1 1 280px;
+    text-align:center;
+    padding:30px;
+    background:#f8f9fa;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-5px);
+}
+
+.feature-box img{
+    width:160px;
+    height:116px;
+    margin-bottom:15px;
+    object-fit: contain;
+}
+
+.feature-box h3{
+    font-size:20px;
+    margin-bottom:12px;
+    color:#4f46e5;
+}
+
+.feature-box p{
+    font-size:15px;
+    color:#555;
+}
+
+/* ===== TEAM ===== */
+.team-container{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.team-card{
+    width:250px;
+    text-align:center;
+}
+
+.team-card img{
+    width:100%;
+    border-radius:14px;
+    margin-bottom:15px;
+}
+
+.team-card h4{
+    font-size:18px;
+    margin-bottom:5px;
+    color:#222;
+}
+
+.team-card p{
+    font-size:14px;
+    color:#777;
+}
+
+/* ===== CTA ===== */
+.about-cta{
+    background:#4f46e5;
+    text-align:center;
+    padding:80px 20px;
+    color:#fff;
+}
+
+.about-cta h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.about-cta p{
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.about-cta a{
+    display:inline-block;
+    padding:14px 35px;
+    background:#fff;
+    color:#4f46e5;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .story-container,
+    .features,
+    .team-container{
+        flex-direction:column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="about-hero">
+    <h1>About Our Store</h1>
+    <p>
+        We are committed to delivering high-quality products and creating a seamless online shopping experience for our customers.
+    </p>
+</div>
+
+<!-- STORY -->
+<section class="section">
+    <h2 class="section-title">Our Story</h2>
+    <div class="story-container">
+        <div class="story-text">
+            <p>
+                Our journey began with a simple idea: to combine modern design, reliable quality, and fair pricing in one trusted online store.
+            </p>
+            <p>
+                From the very beginning, we focused on customer satisfaction, fast shipping, and building long-term relationships with our shoppers.
+            </p>
+            <p>
+                Today, we continue to grow while staying true to our core values — quality, transparency, and innovation.
+            </p>
+        </div>
+
+        <!-- Replace this image -->
+        <div class="story-image">
+            <img class="hover-img" src="{% static 'img/product-img/product-5.jpg' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="features">
+
+        <div class="feature-box">
+            <!-- Replace icon -->
+            <img src="{% static 'img/core-img/about-1.png' %}" alt="">
+            <h3>Trusted Quality</h3>
+            <p>Every product is carefully selected to ensure top standards and long-lasting value.</p>
+        </div>
+
+        <div class="feature-box">
+            <!-- Replace icon -->
+            <img src="{% static 'img/core-img/about-2.png' %}" alt="Shipping Icon">
+            <h3>Fast Shipping</h3>
+            <p>We process and deliver orders quickly and securely to your doorstep.</p>
+        </div>
+
+        <div class="feature-box">
+            <!-- Replace icon -->
+            <img src="{% static 'img/core-img/about-3.png' %}" alt="Shipping Icon">
+            <h3>Customer Support</h3>
+            <p>Our support team is always ready to assist you whenever you need help.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- TEAM -->
+
+<!-- CTA -->
+<div class="about-cta">
+    <h2>Ready to Explore Our Collection?</h2>
+    <p>Discover premium products designed to elevate your everyday lifestyle.</p>
+    <a href="/">Start Shopping</a>
+</div>
+
+</body>
+</html>
+{% endblock %}

@@ -5,4 +5,4 @@ def blog_views(request):
     return render(request,'blog/blog.html')
 
 def blog_single(request):
-    return render(request,'blog/blog-single.html')
+    return render(request,'blog/single-blog.html')
